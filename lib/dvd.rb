@@ -1,7 +1,9 @@
 # coding: utf-8
+
 class DVD < Midia
 
-    extend FormatadorMoeda
+    #extend FormatadorMoeda
+    include FormatadorMoeda
 
     formata_moeda :valor_com_desconto, :valor
 

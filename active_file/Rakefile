@@ -1,0 +1,11 @@
+#require "bundler/gem_tasks"
+#task :default => :spec
+
+require 'fileutils'
+
+desc "Limpa todas as revistas da pasta db/revistas"
+namespace :db do
+    task :clear do
+        FileUtils.rm Dir['db/revistas/*.yml']
+    end
+end
